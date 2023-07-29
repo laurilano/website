@@ -1,0 +1,377 @@
+@import "~bulma/sass/utilities/initial-variables"
+
+// Config vars
+// Kaldi logo brand color: #FD461E
+$kaldi-red: #D64000
+$kaldi-red-invert: #fff
+
+$primary: $kaldi-red
+$primary-invert: $kaldi-red-invert
+$body-color: #333
+$black: #2b2523
+
+.navbar .navbar-menu
+  box-shadow:none !important
+
+.content .taglist
+  list-style: none
+  margin-bottom: 0
+  margin-left: 0
+  margin-right: 1.5rem
+  margin-top: 1.5rem
+  display: flex
+  flex-wrap: wrap
+  justify-content: left
+  align-items: center
+  li
+    padding: 0 2rem 1rem 0
+    margin-bottom: 1.5rem
+    margin-top: 0
+
+// Helper Classes
+.full-width-image-container
+  width: 100vw
+  //height: 738px
+  position: relative
+  left: 50%
+  right: 50%
+  margin: 2em -50vw
+  background-size: cover
+  background-position: bottom
+  display: flex
+  justify-content: center
+  align-items: center
+
+.full-width-image
+    width: 100vw
+    //height: 738px
+    background-size: cover
+    background-position: bottom
+    display: flex
+    justify-content: center
+    align-items: center
+
+.btn
+    display: inline-block
+    padding: 12px 16px 10px
+    font-size: 18px
+    font-size: 1rem
+    line-height: 1.25
+    background-color: #fff
+    border-radius: .25rem
+    text-decoration: none
+    font-weight: 700
+    color: #CC3700
+    text-align: center
+    -webkit-box-shadow: inset 0 0 0 2px #CC3700
+    box-shadow: inset 0 0 0 2px #f40
+    -webkit-transition: all .15s ease
+    transition: all .15s ease
+
+.margin-top-0
+  margin-top: 0 !important
+
+.navbar-item .icon
+  color: $primary
+// Override for use of svg's from https://simpleicons.org/
+.icon svg
+  width: 1rem
+  height: 1rem
+  fill: currentColor
+.navbar-brand .navbar-item.logo
+  padding: 0 1rem
+footer.footer
+  padding: 2rem 0rem 0rem
+  background-color: transparent
+
+//Menu overrides
+$menu-item-color: $white-ter
+$menu-item-hover-color: $black !important
+$menu-item-hover-background-color: $black
+$menu-item-active-color: $kaldi-red-invert
+$menu-item-active-background-color:	$kaldi-red-invert
+$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-label-color: $white-ter
+
+
+.menu-label
+  font-size: 1em !important
+  text-align: left
+.menu-list
+  list-style: none !important
+  text-align: left
+.social
+  padding: 2em
+  padding-top: 2em !important
+
+.social a
+    padding: .5em .5em .3em .5em
+    //border-radius: .5em
+    //background-color: $white-ter
+    //margin: .5em
+    //width: 1em
+    //height: 1em
+    vertical-align: middle
+    display: inline
+
+// blog roll
+.blog-list-item.is-featured
+  background-color: #d6400033;
+.blog-list-item header
+  display: flex;
+  margin-bottom: 1em;
+.blog-list-item .featured-thumbnail
+  flex-basis: 35%
+  min-width: 100px 
+  margin: 0 1.5em 0 0
+
+
+@import "~bulma"
+
+
+// responsiveness
++tablet-only
+  .blog-list-item .featured-thumbnail
+    flex-basis: 50%;
+
+//+mobile
+@media screen and (max-width: 400px), (min-width: 900px) and (max-width: 1200px)
+  .blog-list-item header
+    display: block
+  .blog-list-item .featured-thumbnail
+    text-align: center
+    max-width: 200px
+    margin: 0 auto 1em
+  .blog-list-item .post-meta
+    margin-left: 1rem
+
+@import "~bulma/sass/helpers/color"
+@import "~bulma/sass/elements/container"
+@import "~bulma/sass/elements/button"
+
+.section
+  padding: 1.5rem 0.75rem
+
+.notification
+  padding: 0.5rem
+
+.mc-card
+  boxShadow: 20px 20px 20px -20px rgba(0,0,0,0.57)
+  borderRadius: 10px
+
+
+.mc-card-overlay 
+  position: absolute
+  bottom: 100%
+  left: 0
+  right: 0
+  background-color: rgba(0,140,186,0.57)
+  overflow: hidden
+  width: 100%
+  height: 0%
+  transition: .5s ease
+
+.mc-card-container
+  position: relative
+  margin: auto
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 0.75rem
+  height: 100%
+  display: flex
+  flex-direction: column
+
+.mc-card-container img:hover
+  transform: scale(1.5)
+  filter: saturate(1.7)
+  transition: 1.5s ease
+  -webkit-transition: 1.5s ease
+  -ms-transition: 1.5s ease
+  
+
+  
+.pg-screenshot-box img:hover
+  transform: scale(1.5)
+  filter: saturate(1.7)
+  transition: 1.5s ease !important
+  -webkit-transition: 1.5s ease !important
+  -ms-transition: 1.5s ease !important
+
+.pg-screenshot-box
+  padding-bottom: 0.5rem
+
+.people
+  text-align: center
+
+.people img
+  border-radius: 50%
+  -webkit-filter: grayscale(80%)
+  transition: 1.5s ease !important
+  -webkit-transition: 1.5s ease !important
+  -ms-transition: 1.5s ease !important
+  
+
+.people img:hover
+  -webkit-filter: grayscale(0%)
+  transform: scale(1.5)
+  filter: saturate(1.2)
+  
+
+
+.mc-card-container:hover .mc-card-overlay
+  //bottom: 0
+  //height: 100%
+  //cursor: pointer
+
+.mc-overlay-text
+  color: yellow
+  font-size: 20px
+  font-weight: bold
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+  text-align: center
+
+.mc-hr 
+  height: 2px
+
+.content h1.gp-landing-page-title
+  color: #b6a676
+
+.column
+  padding: 0.5rem
+
+.tint2 
+  z-index: 2
+  height: 100%
+  width: 100%
+  position: absolute
+  top: 0px
+  left: 0px
+  background: rgba(240,248,255, 0.35)
+
+
+.tint 
+  z-index: 1
+  height: 100%
+  width: 100%
+  position: absolute
+  top: 0px
+  left: 0px
+  background: rgba(240,248,255, 0.95)
+  transition: 1.5s ease
+  -webkit-transition: 5.5s ease
+  -ms-transition: 5.5s ease
+  -webkit-animation: glow linear 20s infinite
+  animation: glow linear 20s infinite
+  @-webkit-keyframes glow  
+    0%
+      background: rgba(240,248,255, 0.95)
+    50%
+      background: rgba(240,248,255, 0.85)
+    100%
+      background: rgba(240,248,255, 0.95)    
+  @keyframes glow
+    0%
+      background: rgba(240,248,255, 0.95)
+    50%
+      background: rgba(240,248,255, 0.85)
+    100%
+      background: rgba(240,248,255, 0.95)
+
+.gp-middle-icon:hover
+  //animation: shake 2s cubic-bezier(.36,.07,.19,.97) both
+  //transform: translate3d(0, 0, 0)
+  //backface-visibility: hidden
+  //perspective: 1000px
+  //cursor: wait
+
+  //@keyframes shake 
+  //  30% 
+  //    transform: translate3d(0, -20px, 0)
+  //  100% 
+  //    transform: translate3d(0, -1000px, 0)
+  
+.gp-header:after
+  display: block
+  content: ""
+  position: absolute
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 29
+  padding-bottom: 2.7vw
+  background-image: url(/img/curve.svg)
+  background-position-x: center
+  background-size: 110vw
+
+.gp-hidden-ctl:hover + .tint
+  bottom: 100%
+  height: 0
+  //cursor: pointer
+
+.gp-header-info
+  opacity: 1
+  -webkit-transition: opacity 5.5s ease-in-out;
+  -moz-transition: opacity 5.5s ease-in-out;
+  -ms-transition: opacity 5.5s ease-in-out;
+  -o-transition: opacity 5.5s ease-in-out;
+
+.gp-hidden-ctl:hover ~ .gp-header-info
+  opacity: 0
+  
+.gp-card
+  display: flex;
+  flex-direction: column;
+  text-align: center
+  position: relative
+  perspective: 1000px
+  background-color: transparent
+  border-radius: 6px
+  box-shadow: 0 0.5em 1em -0.125em rgba(43, 37, 35, 0.1), 0 0px 0 1px rgba(43, 37, 35, 0.02)
+  color: #4a4a4a
+
+.gp-card-container
+  position: relative
+  width: 100%
+  height: 100%
+  padding-bottom: 56.25%
+  text-align: center
+  transition: transform 1.6s
+  transform-style: preserve-3d
+  //box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+
+
+.gp-card:hover .gp-card-container 
+  transform: rotateY(180deg)
+
+.gp-card-front, .gp-card-back 
+  position: absolute
+  width: 100% 
+  height: 100%
+  overflow: hidden
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+
+
+.gp-card-front 
+  background-color: #bbb
+  color: black
+
+
+.gp-card-back 
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 1rem
+  background-color: #2980b9
+  color: white
+  transform: rotateY(180deg)
+
+@media screen and (min-width: 1600px)
+  .full-width-image
+    height: 100vh

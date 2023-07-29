@@ -1,0 +1,233 @@
+
+::-webkit-scrollbar 
+  width: 0
+  height: 0
+
+body
+  scrollbar-width: none 
+  font-family: Open Sans Bold, sans-serif
+  -ms-overflow-style: none  
+  overflow-y: scroll
+
+.gp-title
+  text-align: center
+  padding: .3rem
+  color: black
+  z-index: 10
+
+.gp-landing-page-title
+  text-align: center
+
+.navbar
+  border-bottom: inset 1px lightgray
+
+#main-screenshot
+  opacity: 1
+  transition: 5s
+
+#main-screenshot.hide
+  opacity: 0
+   
+.gp-box .gp-news-title
+  text-decoration: none !important
+  font-size: 1rem
+
+.gp-box
+  box-shadow: 0 0.5em 1em -0.125em rgba(43, 37, 35, 0.6), 0 0px 0 1px rgba(43, 37, 35, 0.02)
+  color: black
+
+.gp-front-news .gatsby-resp-image-wrapper
+  max-width: 600px !important
+  border: black solid 1px
+
+.gp-front-news
+  max-width: 800px 
+  margin: auto
+
+.content li p
+  margin-bottom: 0 !important
+
+@media screen and (min-width: 430px)
+  .more-pub
+    margin-left: 1rem
+
+@media screen and (max-width: 430px)
+  .more-pub
+    margin-top: 0.5rem
+
+.tip, 
+.important,
+.note,
+.warning
+  width: auto !important
+
+.tip .icon, 
+.important .icon,
+.note .icon, 
+.warning .icon
+  width: 5rem 
+  display: inline-table
+
+.tip .content, 
+.important .content,
+.note .content,
+.warning .content
+  vertical-align: middle
+  padding-left: 0
+
+.doc-list .icon
+  display: table-cell;
+  vertical-align: middle;
+  border: none
+  width: 7rem 
+  
+
+.doc-list .content
+  border: none
+  vertical-align: middle
+  padding-left: 1.5em
+
+.download-box
+  max-width: 40em
+  border-radius: 10px
+
+div.download-box
+	background: #90ff80
+	font-size: 90%
+	padding-left: 1.1em
+	padding-right: 1.1em
+	padding-top: 0.1em 
+
+div.download-box a 
+	font-size: 150%
+	line-height: 120%
+	text-decoration: none
+	color: #0c5e00
+
+div.download-box a:hover 
+	background: #90ff80
+	text-decoration: underline
+	color: #0c5e00
+
+div.download-box img.download-icon 
+	background: #90ff80
+	float: left
+
+div.download-box a:visited 
+	color: #0c5e00;
+
+div.download-box table .icon
+  width: 5rem 
+  display: table-cell
+
+div.download-box table .content
+  vertical-align: middle
+  padding-left: 0
+
+.download-box .gatsby-resp-image-image 
+  box-shadow: none !important
+
+.download-box table
+  width: unset !important
+
+.navbar
+  //position: absolute
+  //top: 0
+  //width: 100%
+  background: rgba(240, 248, 250, .85)
+  border-bottom: none
+
+#gplates-icon-div svg
+  display: block
+  margin: auto
+
+#big-g
+  fill: blue
+  transform-origin: center
+  animation: kaboom 5s ease alternate infinite
+  
+  @keyframes kaboom 
+    0%
+      fill: blue
+      transform:  scale(1.0)
+    50% 
+      fill: red
+      transform: scale(0.4)
+    100% 
+      fill: yellow
+      transform: scale(1.0)
+  @-webkit-keyframes kaboom  
+    0%
+      fill: blue
+      transform:  scale(1.0)
+    50% 
+      fill: red
+      transform: scale(0.4)
+    100% 
+      fill: yellow
+      transform: scale(1.0)
+
+#hexagon-with-teeth
+  transform-origin: center
+  animation: rotate-teeth 5s ease alternate infinite
+  
+  @keyframes rotate-teeth 
+    0%
+      transform: rotate(0deg) 
+    50% 
+      transform: rotate(90deg) 
+    100% 
+       transform: rotate(180deg)
+  @-webkit-keyframes rotate-teeth  
+    0%
+      transform: rotate(0deg) 
+    50% 
+      transform: rotate(90deg) 
+    100% 
+       transform: rotate(180deg)
+
+#hexagon
+  transform-origin: center
+  fill: red
+  animation: hexagon 5s ease alternate infinite
+  
+  @keyframes hexagon 
+    0%
+      fill: red
+      transform: rotate(0deg) 
+    50% 
+      fill: yellow
+      transform: rotate(-180deg) 
+    100% 
+      fill: blue
+      transform: rotate(-360deg)
+  @-webkit-keyframes hexagon  
+    0%
+      fill: red
+      transform: rotate(0deg) 
+    50% 
+      fill: yellow
+      transform: rotate(-180deg) 
+    100% 
+      fill: blue
+      transform: rotate(-360deg)
+
+#old-g
+  display: none
+  transform: translate(-2710px,-410px) scale(3.5)
+
+.social object
+  height: 40px
+  pointer-events: none
+
+.social a
+  display: inline-block
+
+.toc ul
+  margin-left: 1.5em
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+    scroll-margin-top: 100px

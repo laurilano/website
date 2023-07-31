@@ -1,10 +1,8 @@
-### How to develop locally
+### Setup Dev Env
 
-- Step 0: nvm use 18
-- Step 1: `npm install --legacy-peer-deps`
-- Step 2: `npm run build`
-- Step 3: `gatsby develop`
-
-### Current deploy
-
-https://wizardly-shaw-457182.netlify.app/
+- Step 0: install gatsbyjs. See this https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/
+- Step 1: `git clone https://github.com/ModelAtlasofTheEarth/website.git atlas-website.git`
+- Step 2: `cd atlas-website.git` and then `npm install --legacy-peer-deps`
+- Step 3: `npm run build`
+- Step 4: `gatsby develop`
+- Step 5: in web browser, go http://localhost:8000

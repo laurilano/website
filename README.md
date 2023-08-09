@@ -6,3 +6,9 @@
 - Step 3: `npm run build`
 - Step 4: `gatsby develop`
 - Step 5: in web browser, go http://localhost:8000
+
+### Staging server
+
+ https://websitemain60061.gatsbyjs.io
+
+ 

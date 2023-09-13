@@ -121,10 +121,10 @@ const PeopleTemplate = ({
                     10.17612/f4h1-w124
 
                     <br/><br/>
-                    <body>
+                    <div>
                       <a class="button"><strong>Data Citation</strong></a>
                       
-                    </body>
+                    </div>
                   </p>
               </div>
                         
@@ -168,21 +168,21 @@ const PeopleTemplate = ({
           <div>
 
 
-            <head>
+            
               <meta name="viewport" content="width=device-width, initial-scale=1"/>
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
-            </head>
+            
 
-            <body>
+            <div>
               <a class="button">A Bulma Button</a>
-            </body>
+            </div>
 
-            <head>
+            
               <meta name="viewport" content="width=device-width, initial-scale=1"/>
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
-            </head>
+            
 
-            <body>
+            <div>
               <div class="control">
                 <div>
                   <h1>
@@ -208,7 +208,7 @@ const PeopleTemplate = ({
                 </div>
               
               </div>
-            </body>
+            </div>
 
           
             
@@ -220,7 +220,9 @@ const PeopleTemplate = ({
       
         </div>  
         
-
+        <div className="content-tab" id="Other">  
+        </div>
+        
 
     </section>
 

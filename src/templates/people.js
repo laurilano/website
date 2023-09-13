@@ -11,11 +11,11 @@ function openTab(evt, tabName) {
   var i, x, tablinks;
   x = document.getElementsByClassName("content-tab");
   for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
+    x[i].style.display = "none";
   }
   tablinks = document.getElementsByClassName("tab");
-  for (i = 0; i < x.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" is-active", "");
   }
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " is-active";
@@ -34,26 +34,23 @@ const PeopleTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-
     <section className="section">
       {helmet || ""}
 
       <nav class="tabs is-boxed is-fullwidth is-large">
         <div class="container">
           <ul>
-            <li class="tab is-active" onClick={(event)=>openTab(event,'Overv')}><a >Overview</a></li>
-            <li class="tab" onClick={(event)=>openTab(event,'Desc')}><a >Description</a></li>
-            <li class="tab" onClick={(event)=>openTab(event,'Other')}><a >Tab3</a></li>
+            <li class="tab is-active" onClick={(event) => openTab(event, 'Overv')}><a >Overview</a></li>
+            <li class="tab" onClick={(event) => openTab(event, 'Desc')}><a >Description</a></li>
+            <li class="tab" onClick={(event) => openTab(event, 'Other')}><a >Tab3</a></li>
           </ul>
         </div>
       </nav>
 
       <div class="container section">
-
-        <div id="Overv" className="content-tab" />
-          
+        {/*** Overv tab */}
+        <div id="Overv" className="content-tab" >
           <div class="box">
-
             <div className="container content">
               <div className="columns">
                 <div className="column is-10 is-offset-1">
@@ -87,118 +84,81 @@ const PeopleTemplate = ({
               </div>
             </div>
           </div>
-            
-          <div className='columns is-mobile is-centered content-tab'>
-          
-            <div class="column box has-background-warning is-one-quarter">
+        </div>
+        {/*** end of Overv tab */}
 
-              <div class="content">
-                  <p>
-                    <strong>Author</strong> 
-                    <br/>
-                    {name} ({title})
-                    <br/><br/>
-
-                    <strong>Collaborators</strong> 
-                    <br/>
-                    MARIANE ANDREETA (USP)
-                    <br/>
-                    Everton Lucas-Oliveira (Universidade de São Paulo)
-
-                    <br/><br/>
-                    <strong>Created</strong> 
-                    <br/>
-                    Oct. 8, 2020
-
-                    <br/><br/>
-                    <strong>License</strong> 
-                    <br/>
-                    ODC-BY 1.0
-                    
-                    <br/><br/>
-                    <strong>Digital Object Identifier</strong> 
-                    <br/>
-                    10.17612/f4h1-w124
-
-                    <br/><br/>
-                    <div>
-                      <a class="button"><strong>Data Citation</strong></a>
-                      
-                    </div>
-                  </p>
-              </div>
-                        
-            <div/>
-          </div>
-
-            
-
-            <div class="box column">
-
-              <div class="content">
-                <p>
-                  <strong>Description</strong> <br></br>
-                  A set of 11 sandstone plugs from Kocurek Industries: Bandera Gray, Parker, Kirby, Bandera Brown, Berea Sister Gray, Berea Upper Gray, Berea, Castlegate, Buff Berea, Leopard and Bentheimer. Source: https://kocurekindustries.com/sandstone-cores.
-
-                  All samples were subject to a combined experimental and computational analysis in order to estimate Porosity and Permeability.
-
-                  For more details, please refer to: https://arxiv.org/abs/2010.10679.
-                
-                </p>
-              </div>
-            
+        {/*** Other tab */}
+        <div className='columns is-mobile is-centered content-tab' id="Other" style={{ display: 'none' }}>
+          <div class="column box has-background-warning is-one-quarter">
+            <div class="content">
+              <p>
+                <strong>Author</strong>
+                <br />
+                {name} ({title})
+                <br /><br />
+                <strong>Collaborators</strong>
+                <br />
+                MARIANE ANDREETA (USP)
+                <br />
+                Everton Lucas-Oliveira (Universidade de São Paulo)
+                <br /><br />
+                <strong>Created</strong>
+                <br />
+                Oct. 8, 2020
+                <br /><br />
+                <strong>License</strong>
+                <br />
+                ODC-BY 1.0
+                <br /><br />
+                <strong>Digital Object Identifier</strong>
+                <br />
+                10.17612/f4h1-w124
+                <br /><br />
+                <div>
+                  <a class="button"><strong>Data Citation</strong></a>
+                </div>
+              </p>
             </div>
+            <div />
+          </div>
+          <div class="box column">
+            <div class="content">
+              <p>
+                <strong>Description</strong> <br></br>
+                A set of 11 sandstone plugs from Kocurek Industries: Bandera Gray, Parker, Kirby, Bandera Brown, Berea Sister Gray, Berea Upper Gray, Berea, Castlegate, Buff Berea, Leopard and Bentheimer. Source: https://kocurekindustries.com/sandstone-cores.
 
+                All samples were subject to a combined experimental and computational analysis in order to estimate Porosity and Permeability.
 
-            
+                For more details, please refer to: https://arxiv.org/abs/2010.10679.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/*** end of Other tab */}
 
-            
-          </div> 
-
-        </div>  
-
-
-
-
-
-
-
-
-        <div className="content-tab" id="Desc">  
+        {/*** Desc tab */}
+        <div className="content-tab" id="Desc" style={{ display: 'none' }}>
           <div>
-
-
-            
-              <meta name="viewport" content="width=device-width, initial-scale=1"/>
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
-            
-
             <div>
               <a class="button">A Bulma Button</a>
             </div>
-
-            
-              <meta name="viewport" content="width=device-width, initial-scale=1"/>
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
-            
-
             <div>
               <div class="control">
                 <div>
                   <h1>
-                      Enter a name for your model here: 
+                    Enter a name for your model here:
                   </h1>
                 </div>
 
-                <input class="input is-success" type="text" placeholder="Write model name here..."/>
-                
-                <input type="radio" name="answer"/> Yes
-                <input type="radio" name="answer"/> No
-                <br/>
+                <input class="input is-success" type="text" placeholder="Write model name here..." />
 
-                <input type="checkbox"/> Check me!   
-                <br/>
-              
+                <input type="radio" name="answer" /> Yes
+                <input type="radio" name="answer" /> No
+                <br />
+
+                <input type="checkbox" /> Check me!
+                <br />
+
                 <div class="select">
                   <select>
                     <option>option 1</option>
@@ -206,28 +166,14 @@ const PeopleTemplate = ({
                     <option>option 3</option>
                   </select>
                 </div>
-              
               </div>
             </div>
-
-          
-            
-
-  
-
           </div>
-
-      
-        </div>  
-        
-        <div className="content-tab" id="Other">  
         </div>
-        
+        {/*** end of Other tab */}
 
+      </div>
     </section>
-
-
-
   );
 };
 

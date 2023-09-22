@@ -36,7 +36,8 @@ const PeopleTemplate = ({
   return (
     <section className="section">
       {helmet || ""}
-
+      {/*** Use Bulma's CSS sheet */}
+      <link rel='stylesheet' href= 'https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'></link>
       <nav class="tabs is-boxed is-fullwidth is-large">
         <div class="container">
           <ul>
@@ -66,6 +67,7 @@ const PeopleTemplate = ({
                   >
                     {title}
                   </h1>
+                  {/*** All non-yaml contents of the people md file */}
                   <PostContent content={content} />
 
                   {/*tags && tags.length ? (
